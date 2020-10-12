@@ -121,7 +121,7 @@
               /*footer section*/
                   .footer-top
                   {
-                    background: #111;
+                    background: #a92f2f;
                     padding:80px 0;
                     color:white;
                   }
@@ -184,7 +184,7 @@
                   .footer-bottom-text
                   {
                     text-align: center;
-                    background: #000;
+                    background: #c03333;
                     line-height: 75px;
                     color:white;
                   }
@@ -210,7 +210,7 @@
                     }
                   }
 
-                   /*banner section*/
+                  /*banner section*/
                   .pimg3
                   {
                       position:relative;

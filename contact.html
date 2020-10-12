@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="icon" href="favicon.jpeg" type="image/png">
+    <title>Florriet</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/mStyle.css">
+      <link href="02-rsvp/css/styles.css" rel="stylesheet">
+	
+	<link href="02-rsvp/css/responsive.css" rel="stylesheet">
+       
+    <script src="https://kit.fontawesome.com/d9a8de9e4b.js" crossorigin="anonymous"></script>
+      
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+   
+    <script type="text/javascript">
+   function sendEvent(){
+
+
+   		console.log( document.getElementById('email').value,  document.getElementById('name').value,  document.getElementById('message').value)
+
+        Email.send({
+            name:document.getElementById('name').value,
+    
+            Host : "smtp.elasticemail.com",
+    
+            Username : "shubhamsinghk116@gmail.com",
+    
+            Password : "CC8DCD6FC9F3ADCC7BA7DD15F8AB4DEC7875",
+    
+            To : 'shubhamsinghk116@gmail.com',
+
+            Subject : document.getElementById('email').value+" Tried to contact",
+
+            From: "shubhamsinghk116@gmail.com",
+
+            Body : document.getElementById('message').value+" from "+document.getElementById('email').value
+		}).then(function(response){
+			console.log(response)
+	        if (response == 'OK'){ 
+	            alert("Mail sent successfully");
+	        }
+	        else{
+		        throw new Error("Error: " + response);
+		        console.log(response);
+	        }
+        });
+    
+    }
+    
+    
+    
+    </script>
+  </head>
+    
+    
+    
+
+  <body>
+	
+       <nav class="navbar navbar-expand-lg navbar-light  fixed-top">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#"><img src="logo.png" width="50" height="50"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="gallery.html">Gallery</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+</nav>
+	
+	<div class="main-slider">
+		<div class="display-table center-text">
+			<div class="display-table-cell">
+				<div class="slider-content">
+					
+					<h3 class="pre-title">FLORRIET</h3>
+					<h1 class="title">CONTACT US</h1>
+					
+				</div><!-- slider-content-->
+			</div><!--display-table-cell-->
+		</div><!-- display-table-->
+	</div><!-- main-slider -->
+	
+	
+<!--	<section class="section contact-area">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-sm-12 col-md-4 col-lg-6">
+					<div class="margin-bottom display-table">
+						<div class="display-table-cell">
+							
+							<div class="heading">
+								<h2 class="title">Contact Us</h2>
+								<i class="icon icon-star"></i>
+							</div>
+							
+							
+							
+							<h3><a href="tel:784-412-0646" class="phone">784-412-0646</a></h3>
+							<h3><a href="tel:784-412-0245" class="phone">784-412-0245</a></h3>
+							<h5><a href="mailto:events@colorlib.com" class="email">info@florriet.co</a></h5>
+							<p> UK</p>
+							
+						</div><!-- display-table-cell -->
+				<!--	</div><!-- margin-bottom -->
+			<!--<!--	</div><!-- col-sm-6 -->
+				
+		<!--	<div class="col-sm-12 col-md-8 col-lg-6">
+					<div class="contact-form margin-bottom">
+						<h2 class="center-text">Get in touch</h2>
+						<h4 class="pre-title center-text">Contact here!</h4>
+						<form id="contact_form"  onsubmit="event.preventDefault(); sendEvent();" >
+							<div class="row">
+							
+								<div class="col-sm-12 margin-bottom">
+									<label>Full Name</label>
+									<input class="name-input" id="name" name="name" type="text" >
+								</div>
+								<div class="col-sm-12 margin-bottom">
+									<label>Email</label>
+									<input class="email-input" id="email" name="email" type="text" >
+								</div>
+                                <div class="col-sm-12 margin-bottom">
+                                    <label>Message</label>
+                               <textarea class="form_input form_text" name="message" id="message" placeholder="Message" required="required" cols="55" rows="5"></textarea>
+                                </div>
+								<div class="col-sm-12 center-text">
+									<button class="btn" type="button" name="submit"><b>Submit</b></button>
+								</div>
+								
+							</div><!-- row -->	
+					<!--	</form>
+					</div><!-- contact-form -->
+			<!--	</div><!-- col-sm-6 -->
+				
+		<!--	</div><!-- row -->
+	<!--	</div><!-- container -->
+<!--	</section><!-- section --> 
+	
+	<section class="contact-area">
+		<div class="contact-wrapper section float-left">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2"></div>
+					
+					<div class="col-sm-10">
+						<div class="heading">
+							<h3 class="title" style="color: blue">Contact Us</h3>
+							<i class="icon icon-star"></i>
+						</div>
+						
+						<div class="margin-bottom" style="font-size: 25px;color: #E45F74">
+							 <li><i class="fas fa-map-marker-alt"></i> Aylesbury, Buckinghamshire,United Kingdom.</li>
+                            <br><br>
+                              <li><i class="fas fa-envelope-square"></i>  info@florriet.co.uk</li>
+                            <br>
+                            <br>
+                              <li><i class="fas fa-phone-square-alt "></i>+075 0725 5419</li>
+							
+							<p></p>
+							
+						</div><!-- margin-bottom -->
+					</div><!-- col-sm-10 -->
+					
+				</div><!-- row -->
+			</div><!-- container -->
+		</div><!-- float-left -->
+		
+		<div class="map-area">
+			<div id="map" style="height:100%;"></div>
+		</div><!-- map-area -->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39464.05282514702!2d-0.8504559531182803!3d51.81523579972237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487657882dadcdbd%3A0xd81b10fa587ffbb3!2sAylesbury%2C%20UK!5e0!3m2!1sen!2sin!4v1602491121132!5m2!1sen!2sin" width="700" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	
+	</section>
+     
+      
+<!-- Footer Section -->
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
+          <h3>Florriet</h3>
+          <p style="color: aliceblue">Property Development & Maintenance</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
+          <h3>Follow Us</h3>
+          <p style="color: aliceblue">Please follow us on our Facebook.</p>
+          <a href="https://m.facebook.com/florrietservices" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-three">
+          <h3 id="Contact">Contact</h3>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt"></i> Aylesbury, Buckinghamshire,United Kingdom.</li>
+            <li><i class="fas fa-envelope-square"></i>  info@florriet.co.uk</li>
+            <li><i class="fas fa-phone-square-alt"></i>  +075 0725 5419</li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom-text">Developed by <a href="https://www.engagenreap.com" target="_blank">EnR Team</a></p>
+</footer>
+    
+
+ 
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

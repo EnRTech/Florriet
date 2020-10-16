@@ -20,40 +20,34 @@
    
     <script type="text/javascript">
    function sendEvent(){
+	    	const url = 'https://engagenreap.pythonanywhere.com/api/send/mail'
+	    	const name = document.getElementById('name').value;
+	    	const to = "info@mafaldainspanishtuition.com";
+	    	const from = document.getElementById('email').value;
+	    	const msg = name+" have sent the following message/query:\n "+document.getElementById('message').value;
+	    	const data = {'_to':to, '_from':from, 'msg':msg}
+	 		const btn = document.getElementById('snd');
+	 		btn.disabled = true;
+	 		btn.style.background = "#2e21df9e";
+	 		btn.innerHTML = '<i class="fa fa-spinner fa-spin fa-2x"></i>'
 
 
-   		console.log( document.getElementById('email').value,  document.getElementById('name').value,  document.getElementById('message').value)
 
-        Email.send({
-            name:document.getElementById('name').value,
-    
-            Host : "smtp.elasticemail.com",
-    
-            Username : "shubhamsinghk116@gmail.com",
-    
-            Password : "CC8DCD6FC9F3ADCC7BA7DD15F8AB4DEC7875",
-    
-            To : 'shubhamsinghk116@gmail.com',
+	 		axios.post(url, data)
+	 		.then(function(res){
+	 			console.log(res);
+	 			btn.disabled = false;
+		 		btn.style.background = "#2e21df";
+	 			btn.innerHTML = 'Sent Successfully<i class="fa fa-check-circle"></i>';
+	 		})	 
+	 		.catch(function(err){
+	 			console.log(err);
+	 			btn.disabled = false;
+		 		btn.style.background = "#2e21df";
+	 			btn.innerHTML = 'Send Message';
+	 		})
 
-            Subject : document.getElementById('email').value+" Tried to contact",
-
-            From: "shubhamsinghk116@gmail.com",
-
-            Body : document.getElementById('message').value+" from "+document.getElementById('email').value
-		}).then(function(response){
-			console.log(response)
-	        if (response == 'OK'){ 
-	            alert("Mail sent successfully");
-	        }
-	        else{
-		        throw new Error("Error: " + response);
-		        console.log(response);
-	        }
-        });
-    
-    }
-    
-    
+	    }    
     
     </script>
   </head>
@@ -143,7 +137,11 @@
 					</div><!-- margin-bottom -->
 				</div><!-- col-sm-6 -->
 				
+<<<<<<< HEAD
 			<div class="col-sm-12 col-md-8 col-lg-6">
+=======
+		<div class="col-sm-12 col-md-8 col-lg-6">
+>>>>>>> 10161724f22e1398e8f0dc51a1edb081b33121fe
 					<div class="contact-form margin-bottom">
 						<h2 class="center-text">Get in touch</h2>
 						<h4 class="pre-title center-text">Contact here!</h4>
@@ -163,17 +161,24 @@
                                <textarea class="form_input form_text" name="message" id="message" placeholder="Message" required="required" cols="55" rows="5"></textarea>
                                 </div>
 								<div class="col-sm-12 center-text">
-									<button class="btn" type="button" name="submit"><b>Submit</b></button>
+									<button class="btn" type="submit" id="snd" name="submit"><b>Submit</b></button>
 								</div>
 								
+<<<<<<< HEAD
 							</div><!-- row -->	
 						</form>
 					</div><!-- contact-form -->
 				</div><!-- col-sm-6 -->
+=======
+							</div>	
+						</form>
+					</div>
+				</div>
+>>>>>>> 10161724f22e1398e8f0dc51a1edb081b33121fe
 				
-		<!--	</div><!-- row -->
-	<!--	</div><!-- container -->
-<!--	</section><!-- section --> 
+		</div>
+	</div>
+</section>
 	
 <!--	<section class="contact-area">
 		<div class="contact-wrapper section float-left">

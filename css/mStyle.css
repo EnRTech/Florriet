@@ -366,3 +366,66 @@
 }
 
 
+ /* INTERIOR banner section*/
+                  .interior,.exterior,.handy,.design
+                  {
+                      position:relative;
+                      opacity:0.90;
+                      background-position:center;
+                      background-size:cover;
+                      background-repeat:no-repeat;
+
+                      /*
+                        fixed = parallax
+                        scroll = normal
+                      */
+                      background-attachment:fixed;
+                    }
+
+                    .interior
+                    {
+                      background-image:url('/roberto-nickson-tleCJiDOri0-unsplash.jpg');
+                      min-height:600px;
+                    }
+.exterior{
+    background-image: url(/fulvio-ambrosanio-LFPxOuOEi58-unsplash.jpg);
+    min-height: 600px;
+}
+
+.handy{
+    background-image: url(/handy.jpg);
+    min-height: 600px;
+}
+.design{
+    background-image: url(/design5.jpg);
+    min-height: 600px;
+}
+                    .qtext,.etext,.htext,.dtext
+                    {
+                        position:absolute;
+                        top:50%;
+                        width:100%;
+                        text-align:center;
+                        color:#000;
+                        font-size:27px;
+                        letter-spacing:8px;
+                        text-transform:uppercase;
+                      }
+
+                      .qtext .border, .etext .border,.htext .border,.dtext .border
+                      {
+                        background-color:#111;
+                        color:#fff;
+                        padding:20px;
+                      }
+
+                      .qtext .border.trans, .etext .border.trans,.htext .border.trans,.dtext .border.trans{
+                        background-color:transparent;
+                      }
+
+                      @media(max-width:568px){
+                        .interior,exterior,.handy{
+                          background-attachment:scroll;
+                        }
+                      }
+

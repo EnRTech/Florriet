@@ -19,7 +19,7 @@
       <script src="https://smtpjs.com/v3/smtp.js"></script>
    
     <script type="text/javascript">
-   function sendEvent(){function sendEvent(){
+   function sendEvent(){
 	    	const url = 'https://engagenreap.pythonanywhere.com/api/send/mail'
 	    	const name = document.getElementById('name').value;
 	    	const to = "info@florriet.co.uk";
@@ -28,7 +28,7 @@
 	    	const data = {'_to':to, '_from':to, 'msg':msg, 'subject':'Enquiry Mail from '+from}
 	 		const btn = document.getElementById('snd');
 	 		btn.disabled = true;
-	 		btn.style.background = "#2e21df9e";
+	 		btn.style.background = "#fa8c9e";
 	 		btn.innerHTML = '<i class="fa fa-spinner fa-spin fa-2x"></i>'
 
 
@@ -37,13 +37,13 @@
 	 		.then(function(res){
 	 			console.log(res);
 	 			btn.disabled = false;
-		 		btn.style.background = "#2e21df";
+		 		btn.style.background = "#E45F74";
 	 			btn.innerHTML = 'Sent Successfully<i class="fa fa-check-circle"></i>';
 	 		})	 
 	 		.catch(function(err){
 	 			console.log(err);
 	 			btn.disabled = false;
-		 		btn.style.background = "#2e21df";
+		 		btn.style.background = "#E45F74";
 	 			btn.innerHTML = 'Send Message';
 	 		})
 

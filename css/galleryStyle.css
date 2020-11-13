@@ -62,7 +62,7 @@
                   {
                       text-align: center;
                       margin-top: 70px;
-                      font-family: 'Droid Sans', sans-serif;
+                      font-family: poppins;
                       font-weight: bold;
                   }
 
@@ -121,14 +121,14 @@
               /*footer section*/
                   .footer-top
                   {
-                    background: #a92f2f;
+                    background: #201919;
                     padding:80px 0;
                     color:white;
                   }
 
                   .segment-one h3
                   {
-                    font-family: Courgette;
+                    font-family: poppins;
                     color:#fff;
                     letter-spacing: 3px;
                     margin:10px 0;
@@ -184,7 +184,7 @@
                   .footer-bottom-text
                   {
                     text-align: center;
-                    background: #c03333;
+                    background: #151111;
                     line-height: 75px;
                     color:white;
                   }
